@@ -4,7 +4,7 @@
     "type": "project",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
-    "prefer-stable": false,
+    "prefer-stable": true,
     "require": {
         "composer/installers": "^2.1",
         "cweagans/composer-patches": "^1.7",
@@ -45,9 +45,22 @@
             "url": "https://asset-packagist.org"
         },
         {
-            "type": "composer",
-            "url": "https://drupalwxt.github.io/composer-extdeps/"
-        }
+            "type": "package",
+            "package": {
+              "name": "danrod96-new/wxt",
+              "version": "5.4.4",
+              "type": "drupal-profile",
+              "extra": {
+                "installer-name": "wxt"
+              },
+              "dist": {
+                "url": "https://github.com/danrod96-new/wxt/archive/refs/tags/5.4.4.zip",
+                "type": "zip"
+              },
+              "license": "GNU"
+            }
+      },
+
     ],
     "scripts": {
         "drush": "docker compose exec -w /var/www/html web /var/www/vendor/bin/drush",
