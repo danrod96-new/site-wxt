@@ -59,8 +59,7 @@
               },
               "license": "GNU"
             }
-      },
-
+      }
     ],
     "scripts": {
         "drush": "docker compose exec -w /var/www/html web /var/www/vendor/bin/drush",
